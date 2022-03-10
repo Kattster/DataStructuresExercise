@@ -1,8 +1,10 @@
 // 1a. Create a const variable named jedi and set the value of the variable to an empty array
-//const jedi = [];
-let jedi = [];
+const jedi = [];
+// let jedi = [];
+
 //1b. Using index add "Luke" to the jedi array (Should be the first and only item in the array)
-jedi [jedi.length] = "Luke";
+jedi[0] = 'Luke'
+// jedi [jedi.length] = "Luke";
 console.log(jedi); 
 
 // 1c. Using the Push method add "Obi-Wan Kenobi" to the jedi array
@@ -17,7 +19,10 @@ console.log(jedi);
 console.log(jedi[1]); 
 
 // 1f. Using another array method remove "Obi-Wan Kenobi" from the end of the jedi array
+// const force = [jedi.pop()]
 jedi.splice(2, 2);
+
+console.log(jedi); 
 
 // 1g. Finally, using another method remove "Yoda" from the beginning of the jedi array and display the final value of the array (HINT: It should just be "Luke". Also, you will need a console log for this.)
 jedi.shift(1);
@@ -52,39 +57,43 @@ console.log(droids["astromech"]);
 console.log(droids.protocol);
 
 // 3d. In the droids variable/object change the "IG-88" value to "IG-11"
-droids[`assassin`] = `IG-11`;
+
+// droids[`assassin`] = `IG-11`;
+droids.assassin = 'IG-11';
 console.log(droids);
+
 
 // BONUS
 
 // 4. Using indexes display the "V" from "Darth Vader" from the starWarsVillains array (You will need a console log for this)
 console.log("Darth Vader"[6]);
+console.log(starWarsVillains[0][6]);
 
 // 5. Using only negative numbers display "Darth Sidious" from the sithLords array using Slice (You will need a console log for this)
 console.log(sithLords.slice(-2, -1));
 
 // 6a. Create a const variable named starWarsMovies and set the value to an array of three objects (AKA An array with three items in it and each item is a separate object). Use the following keys and values for each object in the array: 1st OBJECT (episodeOne: "The Phantom Menace", episodeTwo: "Attack of the Clones", and episodeThree: "Revenge of the Sith"). 2nd OBJECT (episodeFour: "A New Hope", episodeFive: "The Empire Strikes Back", and episodeSix: "Return of the Jedi"). 3rd OBJECT (episodeSeven: "The Force Awakens", episodeEight: "The Last Jedi", and  episodeNine: "The Rise of Skywalker"). I would suggest using some copy and paste on this one.
-const starWarsMovies= {
-Object1:{
+const starWarsMovies= [
+    {   
     episodeOne: "The Phantom Menace",
     episodeTwo: "Attack of the Clones", 
-    episodeThree: "Revenge of the Sith"
+    episodeThree: "Revenge of the Sith" 
     },    
-Object2:{
+    {
     episodeFour: "A New Hope", 
     episodeFive: "The Empire Strikes Back", 
     episodeSix: "Return of the Jedi"
     },
-Object3:{
+    {
     episodeSeven: "The Force Awakens", 
     episodeEight: "The Last Jedi", 
     episodeNine: "The Rise of Skywalker"
 }
-};
+];
 
 
 // 6b. Using an array method add the following string values ("Solo" and "Rogue One") as items in the starWarsMovies array between the 1st and 2nd objects (AKA Items) in the starWarsMovies array.
-starWarsMovies['Solo'];
+starWarsMovies.splice(1, 0, 'Solo', 'Rogue One');
 
 console.log(starWarsMovies);
 
